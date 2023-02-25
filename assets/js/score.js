@@ -23,3 +23,11 @@ function showHighscores() {
         }
     }
 }
+
+showHighscores()
+
+// Event Listener on the 'clear highscores' button to clear all highscores
+clearBtn.addEventListener("click", function() {
+    localStorage.removeItem("scores");
+    highscoreList.innerHTML = "";
+})

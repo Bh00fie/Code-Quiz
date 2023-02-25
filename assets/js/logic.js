@@ -53,3 +53,10 @@ var startGame = function() {
     questionIndex = 0;
     generateQuestion(questionObj[questionIndex]);
 }
+
+// For loop to create answers button for the user to select
+for (var i = 0; i< 4; i++) {
+    var choiceBtn = document.createElement("button");
+    choiceList.push(choiceBtn);
+    choices.appendChild(choiceList[i]);
+}

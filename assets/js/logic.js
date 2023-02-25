@@ -108,3 +108,15 @@ function endGame() {
     toggleHide(endScreen);
     finalScore.textContent = timeLeft;
 }
+
+// Store variable to save score to local storage
+var highscoreStore = function() {
+    location.href="highscores.html";
+    var previousScore = JSON.parse(localStorage.getItem("scores")) || [];
+    var user = {
+        initials: userName.value,
+        score: timeLeft,
+    }
+    previousScore.push(user);
+    localStorage.setItem("scores", JSON.stringify(previousScore));
+}

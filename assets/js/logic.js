@@ -101,3 +101,10 @@ var answer = function(event) {
         generateQuestion(questionObj[questionIndex]);
     }
 }
+
+// Function to end game and move to next result, game is ended in three different situation, if score is less than zero, if time ends, if user answered all questions
+function endGame() {
+    toggleHide(questions);
+    toggleHide(endScreen);
+    finalScore.textContent = timeLeft;
+}

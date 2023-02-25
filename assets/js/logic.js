@@ -44,3 +44,12 @@ function toggleHide(element) {
         element.setAttribute("class", "start");
     }
 }
+
+// Function to start the game
+var startGame = function() {
+    timer();
+    toggleHide(startScreen);
+    toggleHide(questions);
+    questionIndex = 0;
+    generateQuestion(questionObj[questionIndex]);
+}

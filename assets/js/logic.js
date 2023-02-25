@@ -70,3 +70,16 @@ function generateQuestion(question) {
         }
     }
 }
+
+// Function to show user is answer selected was incorrect or correct
+function showFeedback(answer) {
+    toggleHide(feedback);
+    setTimeout(function(){
+        toggleHide(feedback);
+    }, 1000);
+        if (answer === true){
+            feedback.textContent = "Correct!"
+        } else {
+            feedback.textContent = "Wrong!"
+        }
+}

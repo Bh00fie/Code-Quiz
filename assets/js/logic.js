@@ -83,3 +83,21 @@ function showFeedback(answer) {
             feedback.textContent = "Wrong!"
         }
 }
+
+// Declaring answer variable to reduce time and play sound if user answer is incorrect and to play audio file is answer is correct before moving to the next question.
+var answer = function(event) {
+    if (event.target.matches("button")) {
+        var selected = event.target.textContent;
+        if (selected === questionObj[questionIndex].correctAnswer) {
+            showFeedback(true);
+            winAudio.play();
+        }
+        else {
+            timeLeft -= 10;
+            showFeedback(false);
+            loseAudio.play();
+        }
+        questionIndex++;
+        generateQuestion(questionObj[questionIndex]);
+    }
+}

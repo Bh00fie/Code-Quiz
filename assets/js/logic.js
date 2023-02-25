@@ -60,3 +60,13 @@ for (var i = 0; i< 4; i++) {
     choiceList.push(choiceBtn);
     choices.appendChild(choiceList[i]);
 }
+
+// Function to generate new questions
+function generateQuestion(question) {
+    if (questionIndex < Object.keys(questionObj).length) {
+        questionTitle.textContent = question.question;
+        for (var i = 0; i<4; i++) {
+            choiceList[i].textContent = question.answers[i];
+        }
+    }
+}

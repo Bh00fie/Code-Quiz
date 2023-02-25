@@ -28,3 +28,19 @@ function timer() {
         }
     }, 1000);
 }
+
+// Function to toggle elements to hide or display, this helps to go from the Start screen to the question screen and to finally go the to highscore screen
+function toggleHide(element) {
+    if (element.classList.contains("feedback") && element.classList.contains("hide")) {
+        element.setAttribute("class", "feedback");
+    }
+    else if (element.classList.contains("feedback")) {
+        element.setAttribute("class", "feedback hide");
+    }
+    else if (element.classList.contains("start")) {
+    element.setAttribute("class", "hide");
+    } 
+    else if (element.classList.contains("hide")) {
+        element.setAttribute("class", "start");
+    }
+}

@@ -120,3 +120,12 @@ var highscoreStore = function() {
     previousScore.push(user);
     localStorage.setItem("scores", JSON.stringify(previousScore));
 }
+
+// Event Listener to start quiz when pressed start button
+startBtn.addEventListener("click", startGame);
+
+// Event Listener to check user answer and move to next question when answer button is clicked
+choices.addEventListener("click", answer);
+
+// Event Listener to submit score to highscores.html page
+submit.addEventListener("click", highscoreStore); 
